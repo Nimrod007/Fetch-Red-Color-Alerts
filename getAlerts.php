@@ -5,7 +5,7 @@ ini_set('max_execution_time', 60);
 //using Redis to save the alert (the timestamp of the alert as the key)
 require 'Predis.php';
 
-//converte the UTF-16 to UTF-8 (for some reason the response is in UTF-16
+//convert the UTF-16 to UTF-8 (for some reason the response is in UTF-16
 function file_get_contents_utf8($fn) {
 	$content = file_get_contents($fn);
 	return mb_convert_encoding($content, 'UTF-8', 'UTF-16');
